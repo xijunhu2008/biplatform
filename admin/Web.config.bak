@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  有关如何配置 ASP.NET 应用程序的详细信息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <appSettings>
+    <!--<add key="dbproxy" value="http://dbproxy.jm47.com/DBProxy.ashx"/>-->
+    <!--登陆session缓存时间(分钟)-->
+    <add key="SessionTimeout" value="20"/>
+    <!--配置数据缓存时间(分钟)-->
+    <add key="ConfigCacheTimeout" value="0"/>
+  </appSettings>
+    <system.web>
+      <customErrors mode="Off" />
+      <compilation debug="true" targetFramework="4.0" />
+    </system.web>
+    <connectionStrings>
+      <add name="ConfigConnection" connectionString="server=localhost;port=3306;database=dbWebServer;user id=root;password=root;charset=utf8;respect binary flags=false;default command timeout=10;" providerName="System.Data.MySqlClient"/>
+    </connectionStrings>
+</configuration>

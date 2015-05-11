@@ -1,0 +1,40 @@
+﻿[11:17:05]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[11:17:08]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[15:09:44]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[15:10:11]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[15:10:55]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[15:11:23]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[17:09:04]System.ArgumentNullException: Argument cannot be null.
+Parameter name: value
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback, System.Web.Caching.CacheItemUpdateCallback onUpdateCallback, Boolean doLock) [0x00000] in <filename unknown>:0 
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.LocalCache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.Cache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at JM.Report.Bll.PageApp.GetById (Int32 pageId) [0x00000] in <filename unknown>:0 
+[17:09:05]System.ArgumentNullException: Argument cannot be null.
+Parameter name: value
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback, System.Web.Caching.CacheItemUpdateCallback onUpdateCallback, Boolean doLock) [0x00000] in <filename unknown>:0 
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.LocalCache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.Cache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at JM.Report.Bll.PageApp.GetById (Int32 pageId) [0x00000] in <filename unknown>:0 
+[17:09:05]System.ArgumentNullException: Argument cannot be null.
+Parameter name: value
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback, System.Web.Caching.CacheItemUpdateCallback onUpdateCallback, Boolean doLock) [0x00000] in <filename unknown>:0 
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.LocalCache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.Cache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at JM.Report.Bll.PageApp.GetById (Int32 pageId) [0x00000] in <filename unknown>:0 
+[18:23:04]System.ArgumentNullException: Argument cannot be null.
+Parameter name: value
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemPriority priority, System.Web.Caching.CacheItemRemovedCallback onRemoveCallback, System.Web.Caching.CacheItemUpdateCallback onUpdateCallback, Boolean doLock) [0x00000] in <filename unknown>:0 
+  at System.Web.Caching.Cache.Insert (System.String key, System.Object value, System.Web.Caching.CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.LocalCache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at DoNet.Common.Cache.Cache.Insert (System.String key, System.Object value, TimeSpan tspan) [0x00000] in <filename unknown>:0 
+  at JM.Report.Bll.PageApp.GetById (Int32 pageId) [0x00000] in <filename unknown>:0 

@@ -1,0 +1,122 @@
+10
+
+dir
+98
+svn://118.123.14.6:51508/projects/trunk/JM.Report/php_report/static/js/jquery-ui/development-bundle/demos
+svn://118.123.14.6:51508/projects
+
+
+
+2014-12-21T08:56:56.722856Z
+76
+haofefe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ed2bec77-3d18-40a6-8d8a-f29b7269be36
+
+resizable
+dir
+
+slider
+dir
+
+widget
+dir
+
+tabs
+dir
+
+progressbar
+dir
+
+tooltip
+dir
+
+effect
+dir
+
+demos.css
+file
+
+
+
+
+2014-06-20T12:28:07.740756Z
+c7fc917de57fba6b610ad6191fc1a28a
+2014-12-21T08:56:56.722856Z
+76
+haofefe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+287
+
+dialog
+dir
+
+accordion
+dir
+
+autocomplete
+dir
+
+selectable
+dir
+
+menu
+dir
+
+position
+dir
+
+images
+dir
+
+draggable
+dir
+
+droppable
+dir
+
+button
+dir
+
+datepicker
+dir
+
+sortable
+dir
+
+spinner
+dir
+

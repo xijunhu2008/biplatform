@@ -1,0 +1,33 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+require('base.php');
+
+class Page extends Base_Controller {
+	function __construct()  
+	{
+        parent::__construct();
+    }
+
+    //获取页面信息，包括它的配置控件信息
+    public function get($id) {   	
+
+    	$this->load->model('Page_model', 'page');
+    	$this->load->model('Report_model', 'report');
+    	$this->load->model('Control_model', 'control');
+    	$page = $this->page->getById($id);
+       
+    	if($page) {
+    		$page['toolbars'] = $this->control->getToolbarControlsByPage($id);
+    		$page['reports'] = $this->report->getReportsByPage($id);
+    		if($page['reports']) {
+    			foreach ($page['reports'] as &$report) {
+    				$report['controls'] = $this->control->getReportControlsByPage($report['id']);
+    			}
+    		}
+    		$this->jsonContent($page);
+    	}
+    	else {
+    		$this->jsonContent(null,1,'当前页面不存在');
+    	}
+    }
+}

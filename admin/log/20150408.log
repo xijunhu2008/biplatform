@@ -1,0 +1,16 @@
+﻿[11:00:38]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[11:01:57]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[11:03:16]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[14:40:53]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[14:43:04]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[16:29:04]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[16:30:53]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 
+[17:58:28]System.NullReferenceException: Object reference not set to an instance of an object
+  at JM.Report.Bll.DataSourceApp.GetById (Int32 id) [0x00000] in <filename unknown>:0 

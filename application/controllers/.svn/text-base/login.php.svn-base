@@ -1,0 +1,33 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+require('base.php');
+
+class Login extends Base_Controller {
+
+	function __construct()  
+	{
+        parent::__construct(1);
+    }
+
+    //登录页
+	function index() {
+		$user = $this->login->getUser();
+		if(isset($_POST['txtuser']) && isset($_POST['txtpwd'])) {
+			$acc = $_POST['txtuser'];
+			$pwd = $_POST['txtpwd'];
+			$user = $this->login->login($acc, $pwd);			
+		}
+		if($user) {
+			redirect(site_url('production'));
+			return;
+		}
+		$this->load->view('v_login');		
+	}
+
+	//登出
+	function logout() {
+		$this->login->logout();
+		redirect(site_url('login'));
+	}
+}
+?>

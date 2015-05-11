@@ -1,0 +1,23 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+require('base.php');
+
+class Production extends Base_Controller {
+	function __construct()  
+	{
+        parent::__construct();
+    }
+
+    public function index() {
+		$user = $this->login->getUser();	
+		$apps = $this->getAll();	
+		$this->parser->parse('v_production', array('apps'=>$apps, 'user'=>$user));
+	}
+
+	//获取所有业务信息
+	public function getAll() {
+		$this->load->model('Production_model', 'production');
+		$pros = $this->production->getAll();
+		return $pros;
+	}
+}

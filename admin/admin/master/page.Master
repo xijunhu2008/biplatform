@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="page.master.cs" Inherits="JM.Report.Web.admin.master.page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../static/css/base.css" rel="stylesheet" />
+
+    <style>
+        /*功能页面上面工具栏*/
+.page-toolbar
+{
+    list-style: none;
+}
+.page-toolbar li
+{
+    float: left;
+    height: 30px;
+    display: inline-block;
+    margin: 2px 4px;
+}
+.page-toolbar li a
+{
+    padding: 4px 8px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    background-color:#43a1da;
+    margin: 0 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #000;
+}
+/*编辑框样式*/
+.edit-content ul
+{
+    list-style: none;
+}
+.edit-content ul li
+{
+    margin: 4px 0;
+}
+.edit-content ul li label
+{
+    width: 80px;
+    line-height: 26px;
+    margin: 0 6px;
+    text-align: right;
+    display: inline-block;
+}
+.edit-content ul li input
+{
+    width: 70%;
+    height: 26px;
+}
+
+    </style>
+
+    <link href="../../static/js/jquery-ui/css/cupertino/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+
+    <script src="../../static/js/jquery.min.js"></script>
+    
+     <!--[if lt IE 8]>
+	<script src="../../static/js/json2.js"></script>
+	<![endif]-->
+    <script src="../../static/js/common.js"></script>
+    <script src="../../static/js/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            resetHieght();
+        });
+
+        function resetHieght() {
+            if (top != window) {
+                top.resetHieght($(document).height());
+            }
+        }
+
+        function renderTable(header, data, id) {
+            var tb = jmtmpl('table_tpl', { header: header, data: data,id: id });
+            return tb;
+        }
+
+        //请求后台服务
+        function request(url, data,method, callback) {
+            if (typeof method == 'function') {
+                callback = method;
+                method = 'get';
+            }
+            $.ajax({
+                url: url,
+                type: method,
+                data: data,
+                success: function (r) {
+                    r = JSON.parse(r);
+                    console.log(r);
+                    if (r.Code == -1) {
+                        message.error('登陆已失效，请重新登陆。');
+                        return;
+                    }
+                    else {
+                        if (r.Code != 0) {
+                            message.error(r.Message);
+                            callback(null, r.Message);
+                        }
+                        else {
+                            callback(r.Data);
+                        }                        
+                    }                    
+                },
+                error: function (e) {
+                    if (e.statusText) {
+                        message.error(e.statusText);
+                    }
+                    callback(null, e);
+                }
+            });
+        }
+
+        var frameworks = null;
+        //获取所有框架
+        function getFrameworks(callback) {
+            if (frameworks) {
+                callback(frameworks);
+                return;
+            }
+            request('../../server/framework.aspx', { 'cmd': 'getall' }, function (r, e) {
+                if (r && typeof r == 'string') {
+                    r = JSON.parse(r);
+                }
+                callback(frameworks = r);
+            });
+        }
+    </script>
+</head>
+<body style="padding:2px 0 0 2px;">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <script id="table_tpl" type="text/html">
+        <table <$=(id?('id='+id):'') $>>
+        <thead>
+            <tr>                
+                <$
+                for(var c,i=0;c=header[i];i++) {
+                $>
+                <th><$=c.displayName$></th>
+                <$
+                }
+                $>
+            </tr>
+        </thead>
+        <tbody>
+            <$
+            if(data && data.length) {
+            for(var i=0,r;r=data[i];i++){
+            $>
+            <tr>
+            <$
+             for(var c,j=0;c=header[j];j++) {
+                $>
+                <td><$=c.renderTD?c.renderTD(r):r[c.name]$></td>
+                <$
+                }
+            }
+                $>
+                </tr>
+                <$
+            }
+            $>
+        </tbody>
+    </table>
+    </script>
+</body>
+</html>

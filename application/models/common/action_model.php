@@ -1,0 +1,89 @@
+<?php
+
+/**
+
+ * SQL操作日志
+
+ *
+
+ * @author fefeding
+
+ * @date 2014-11-10
+
+ */
+
+class Action_model extends MY_Model
+
+{
+
+	/**
+
+	 * 写操作日志
+
+	 * @param {string} $table 操作的表名
+
+	 * @param {string} $target 操作的id
+
+	 * @param {string} $action 操作类型，delete update error debug等
+
+	 * @param {string} $desc 操作说明
+
+	 * @param {string} $sql 操作sql
+
+	 */
+
+	public function write($table, $target, $action, $desc = '', $sql = '') {
+
+		$now = date('Y-m-d H:i:s');
+
+		$user = $this->login->getUser();
+
+		$operator = $user?$user['LoginName']:'';
+
+
+
+		//生成insert语句
+
+		$sql = $this->db->insert_string('t_action_log', array("tablename"=>$table,
+
+			"target_id"=>$target,"action_type"=>$action,"sql"=>$sql,
+
+			"description"=>$desc,"operator"=>$operator,"ondate"=>$now));
+
+		
+
+		$this->db->query($sql);
+
+	}
+
+
+
+	//写错误日志
+
+	public function error($desc) {
+
+		$this->write('',0,'error',$desc);
+
+	}
+
+
+
+	//写debug日志
+
+	public function debug($desc) {
+
+		$this->write('',0,'debug',$desc);
+
+	}
+
+
+
+	//info
+
+	public function info($desc) {
+
+		$this->write('',0,'info',$desc);
+
+	}
+
+}

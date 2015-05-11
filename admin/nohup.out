@@ -1,0 +1,14 @@
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/html/admin
+Listening on port: 8080 (non-secure)
+Change: DoNet.Common.DbUtility.dll
+Change: System.Json.dll
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/html/admin
+Listening on port: 8080 (non-secure)
+WARNING: WebConfigurationManager's LRUcache evictions count reached its max size
+Cache Size: 100 (overridable via MONO_ASPNET_WEBCONFIG_CACHESIZE)
+Change: JM.Report.Bll.dll
+Change: JM.Report.Bll.dll

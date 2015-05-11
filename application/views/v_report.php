@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo $app['displayname']?>--经营分析平台</title>
+    <link rel="shortcut icon" href="<?php echo base_url('favicon.gif')?>" type="image/x-gif" />
+    <link rel="icon" href="<?php echo base_url('favicon.gif')?>" type="image/x-gif" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('static/js/jquery-ui/css/cupertino/jquery-ui-1.10.3.custom.min.css')?>">
+
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url('static/js/jquery-ui/css/cupertino/jmreport-jquery-ui.css')?>">-->
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('static/js/fullcalendar/fullcalendar.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('static/css/report.css')?>">
+    <link href="<?php echo base_url('static/css/menu.css')?>" rel="stylesheet" />
+    <link href="<?php echo base_url('static/css/site.css')?>" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 8]>
+
+	<script type="text/javascript" src="<?php echo base_url('static/js/json2.js')?>"></script>
+
+	<![endif]-->
+
+    <!--jquery Core & oap.js-->
+
+    <script src="<?php echo base_url('static/js/jquery.min.js')?>" type="text/javascript"></script>
+
+    <!--jquery ui-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/fullcalendar/fullcalendar.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/jquery-ui/js/jquery-ui-timepicker-addon.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/jquery-ui/js/jquery-ui-timepicker-zh-CN.js')?>"></script>
+
+    <!--highcharts 图表插件-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/highcharts/highstock.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/highcharts/highcharts-more.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/highcharts/modules/funnel.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/highcharts/modules/exporting.src.js')?>"></script>
+
+    <!--epr控件Base-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/common.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.logic.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.poppage.js')?>"></script>
+
+    <!--  <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.mail.js')?>"></script>
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.notice.js')?>"></script>-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.lan.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.serverProxy.js')?>"></script>
+
+    <!--epr工具栏控件-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.toolbarControls.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/checkBoxList.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/comboBoxOne.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/dateTimeOne.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/dateTimeTwo.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/dateTimePickerOne.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/horizontalListBox.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/monthOne.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/toolbarcontrols/halfaYearOne.js')?>"></script>
+    <script type="text/javascript" src=".<?php echo base_url('static/js/report/toolbarcontrols/textBox.js')?>"></script>
+
+    <!--epr报表控件-->
+
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/jmreport.reportControls.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/gridViewData.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/advanceGridViewData.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/jmChart.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/advanceEprChart.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/gridSparkLine.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/itemCompareList.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/label.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/imageBox.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/DataViewDatePick.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('static/js/report/reportcontrols/linkButton.js')?>"></script>
+    <script>
+
+        document.createElement('header');
+
+        document.createElement('nav');
+
+        document.createElement('section');
+
+        document.createElement('footer');
+
+        
+
+        /**
+
+         * 菜单
+
+         **/
+
+        function jmReportMenus(option) {
+
+            if (typeof (option.isOpenHome) == 'undefined') {
+
+                option.isOpenHome = true;
+
+            }
+
+            if (option.isFindThisPage == 'undefined') {
+
+                option.isFindThisPage = false;
+
+            }
+
+            if (typeof (option.isOpenLevelOne) == 'undefined') {
+
+                option.isOpenLevelOne = false;
+
+            }
+
+            //容纳菜单的容器
+
+            this.target = option.target;
+
+            this.option = option;            
+
+            this.bind();
+
+        };
+
+
+
+        /**
+
+        * 绑定菜单事件
+
+        */
+
+        jmReportMenus.prototype.bind = function () {
+
+            var self = this;
+
+
+
+            //如果用户配置的是连接
+
+            //就跳转连接
+
+            var aItems = this.target.find('a[data-deep]');
+
+            for (var i = 0; i < aItems.length; i++) {
+
+                if ($(aItems[i]).attr("title") && $(aItems[i]).attr("title").indexOf('|') != -1) {
+
+                    var para = $(aItems[i]).attr("title").split('|');
+
+                    $(aItems[i]).attr("title", para[0]);
+
+                    $(aItems[i]).html(para[0] + "&nbsp;&nbsp;");
+
+                    $(aItems[i]).attr('href', para[1].replace('linkurl=', '').replace(new RegExp('&nbsp;', 'g'), ''));
+
+                } else {
+
+                    $(aItems[i]).click(function () {
+
+                        self.expend($(this));
+
+                        return false;
+
+                    });
+
+                }
+
+            }
+
+
+
+            if (this.option.isOpenHome) {
+
+                var home = this.target.find('a[data-home=true]');
+
+                if (home.length > 0) {
+
+                    this.expend($(home[0]));
+
+                    return;
+
+                }
+
+            }
+
+            if (this.option.isFindThisPage) {
+
+                var target = this.target.find('[href=' + this.option.isFindThisPage + ']');
+
+                if (target.length > 0) {
+
+                    this.expend($(target[0]));
+
+                    this.option.isFindThisPage = false;
+
+                }
+
+            }
+
+            if (this.option.isOpenLevelOne) {
+
+                var target = this.target.find('[data-deep=1]');
+
+                for (var i = 0; i < target.length; i++) {
+
+                    $(target[i]).next().show();
+
+                }
+
+            }
+
+        },
+
+        /**
+
+        * 关闭或展开菜单子项
+
+        **/
+
+        jmReportMenus.prototype.expend = function (target, exp) {
+
+            var ul = target.find('+ul');
+
+            //没有子菜单则不处理
+
+            if (ul.length == 0) {
+
+                var pageid = target.attr('data-page');
+
+                //if (pagestr) {
+
+                //var page = JSON.parse(pagestr);
+
+                this.target.find('a.page-current').toggleClass('page-current', false); //去除当前页面样式
+
+                target.toggleClass('page-current', true); //当前样式
+
+                if (pageid && !this.option.isFindThisPage) {
+
+                    jmreport.openReportPage(pageid, target.attr('data-relegation'));
+
+                }
+
+                //去除现在的当前菜单样式
+
+                this.target.find('a.menu-current').toggleClass('menu-current', false);
+
+                var self = this;
+
+                /**
+
+                * 递归设置其父节点样式为menu-current
+
+                */
+
+                function setParentCurrentCss(menu) {
+
+                    var parent = menu.parent().parent().parent();
+
+                    if (parent && parent.length > 0 && parent.attr('id') != 'report-menu') {
+
+                        //设为当前菜单
+
+                        parent.find('>ul').slideDown(500);
+
+                        var lnk = parent.find('>a').toggleClass('menu-current', true);
+
+                        setParentCurrentCss(lnk);
+
+                    }
+
+                }
+
+                //递归设定样式
+
+                setParentCurrentCss(target);
+
+                //}
+
+                return;
+
+            }
+
+            var deep = target.attr('data-deep');
+
+            if (ul.css('display') == 'none') {
+
+                //隐藏同级的其它菜单,并去除当前样式效果
+
+                target.parent().parent().find('>li>ul').slideUp(200);
+
+                if (deep != '1') {
+
+                    target.parent().parent().find('>li>a.menu').attr('class', 'menu');
+
+                    target.attr('class', 'menu menu-current');
+
+                }
+
+                ul.slideDown(500).show();
+
+
+
+                //给菜单加上当前菜单样式
+
+                //target.toggleClass('menu-current', true);
+
+
+
+            }
+
+            else {
+
+                //一级菜单如果打开后再次点击则不处理
+
+                if (deep != '1') {
+
+                    //给菜单去除当前样式
+
+                    target.attr('class', 'menu');
+
+                }
+
+                ul.slideUp(200).show();
+
+            }
+
+        },
+
+
+
+        /**
+
+        * 加载为jquery插件
+
+        **/
+
+        $.fn.menus = function (options) {
+
+            //var id = 'jm-menu_' + $(this).attr('id');
+
+            var options = $.extend({
+
+                target: $(this)
+
+            }, options);
+
+            //生成新tab或返回缓存的tab
+
+            //oap.cache[id] || (oap.cache[id] = 
+
+            return new jmReportMenus(options);
+
+        };
+
+
+
+        $(function(){
+
+            //初始化菜单
+
+            var menu = $('.report-menu').menus();
+
+            jmreport.app = JSON.parse('<?php echo json_encode($app)?>');
+
+            jmreport.root = '<?php echo base_url();?>';
+
+            jmreport.site = '<?php echo site_url();?>';
+
+
+
+            var lnk;
+
+            var hash = window.location.hash;
+
+            if (hash) {
+
+                hash = hash.trimStart('#');
+
+                hash = getUrlParams(hash);                
+
+                if (hash['page']) {
+
+                    lnk = $('.report-menu a[data-page=' + hash['page'] + ']');
+
+                }                
+
+            }
+
+            if (!lnk || !lnk.length) {
+
+                lnk = $('.report-menu a.page:first');
+
+            }
+
+            if (lnk && lnk.length) menu.expend(lnk);
+
+        });
+
+    </script>
+    </head>
+
+    <body>
+    <div id="pagebody">
+      <div id="header">
+          <div id="header-inner">
+            <div id="logininfo">welcome<span class="user">(<?php $user_info = $this->session->userdata('jmreport_loginuserinfo'); echo $user_info['nickname'];?>)</span> <a href="<?php echo base_url('index.php/login/logout')?>" >退出</a> </div>
+            <div class="logo"> <a href="<?php echo site_url('production/index')?>"> <img src="<?php if($app['image']){echo $this->config->item('images_host').$app['image'];} ?>" onerror="<?php echo base_url('static/img/logo.png')?>"/> </a> <span>经营分析平台 -- <?php echo $app['displayname']?></span> </div>
+          </div>
+      </div>
+      <section>
+        <div class="body-width"> 
+          
+          <!--for ie border-->
+          
+          <div class="body-content">
+            <div class="leftArea" id="leftArea" style="width:15%; min-width:220px;">
+              <div class="leftMenu" id="leftMenu" > 
+                
+                <!-- <div class="leftMenuInnerBorder" id="leftMenuInnerBorder" >
+
+                    <img onclick="menuPosition.clickSplit()" class="jmreport-menu-split" id="jmreport-menu-split" src="../static/img/menu_split_bar.png")" />-->
+                
+                <div id="searchkey">
+                  <input type="text" placeholder="指标名称" name="txtsearchkey" id="txtsearchkey" />
+                </div>
+                <div id="report-menu" class="report-menu">
+                  <ul>
+                    <?php echo $menuhtml?>
+                  </ul>
+                </div>
+                
+                <!--</div>--> 
+                
+              </div>
+            </div>
+            <div id="jmreport-page">
+              <div id="jmreport-page-title"></div>
+              <div id="jmreport-page-toolbar"></div>
+              <div id="jmreport-page-content"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <form target="_blank" id="exportform" method="post" action="" style="visibility: hidden;">
+            <input type="text" hidden="hidden" id="par" name="par" />
+            <input type="text" hidden="hidden" id="datapar" name="datapar" />
+          </form>
+          <div id="app_sel_body" class="sel-body"> </div>
+          <div id="go-top" style="position:fixed;display:none;" title="回到顶部"> <a href="#" onclick="javascript:window.scrollTo(0,0);return false;"> <img  src="<?php echo base_url('static/img/go-up.png')?>" alt="回到顶部" /> </a> 
+            <script type="text/javascript">
+
+        $(function () {
+
+            $(window).resize(function () {
+
+                $('#go-top').css({ "top": ($(window).height() - $("#go-top").height()), "left": $(window).width() - $("#go-top").width() - 2 });
+
+            });
+
+            $(window).scroll(function () {
+
+                if ($(window).scrollTop() > 50) {
+
+                    $('#go-top').show();
+
+                }
+
+                else {
+
+                    $('#go-top').hide();
+
+                }
+
+            });
+
+        });
+
+    </script> 
+          </div>
+        </div>
+        
+        <!--全页数据读取-‘正在载入’层--> 
+        
+        <!--<table class="jmreport-allPage-loading" id="jmreport-allPage-loading" >
+
+    <tr>
+
+        <td>
+
+            <img src="../static/img/data-loading.gif")" />
+
+        </td>
+
+    </tr>
+
+</table>--> 
+        
+        <!--全页数据读取-‘正在载入’层 结束--> 
+        
+      </section>
+      <div id="footer">
+          <?php
+            $this->load->view('footer');
+          ?>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,3837 @@
+
+
+#jmreport-page {
+
+	/*padding: 2px 0;*/
+
+	margin: 20px 10px 20px;
+
+	overflow:hidden;
+
+    background-color: #fff;
+
+    opacity: 0.9;
+
+    border:1px solid #b4b4b4;
+	
+	
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+
+}
+
+#jmreport-ajaxLoadPlace{display:none}
+
+/*公告样式*/
+
+#jmreport-page-notice
+
+{
+
+     margin:10px;
+
+     margin-bottom:10px;
+
+     display:none;
+
+}
+
+#jmreport-page-notice:hover #jmreport-page-notice-hide
+
+{
+
+    display:block;
+
+}
+
+#jmreport-page-notice-hide
+
+{
+
+    display:none;
+
+    position:absolute;
+
+    margin-top:-10px;
+
+    margin-left:-10px;
+
+    cursor:pointer;
+
+}
+
+#jmreport-page-notice .jmreport-page-notice-content
+
+{
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    height:40px;
+
+}
+
+
+
+#jmreport-page-notice .jmreport-page-notice-content .notice-left
+
+{
+
+    overflow:hidden;
+
+    float:left;
+
+    display:inline;
+
+    height:40px;
+
+    line-height:40px;
+
+    text-align:center;
+
+    width:120px;
+
+    border-right:1px solid #ccc;
+
+    background-color:#f2f2f2;
+
+    font-size:14px;
+
+    color:#333333;
+
+}
+
+
+
+#jmreport-page-notice .jmreport-page-notice-content .notice-right
+
+{
+
+    height:40px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+#jmreport-page-notice .jmreport-page-notice-content .notice-right .notice-right-content
+
+{
+
+    position:relative;
+
+    list-style:none;
+
+}
+
+
+
+#jmreport-page-notice .jmreport-page-notice-content .notice-right .notice-right-content li a
+
+{
+
+    display:block;
+
+    padding:0px 0px 0px 20px;
+
+    height:40px;
+
+    line-height:40px;
+
+    color:#38a0e1;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+
+
+#jmreport-page-notice .jmreport-page-notice-content .notice-right .notice-right-content li a:hover
+
+{
+
+    text-decoration:underline;
+
+}
+
+
+
+#jmreport-page-notice .little-point-content
+
+{
+
+    overflow:hidden
+
+}
+
+
+
+#jmreport-page-notice .little-point-content .little-point
+
+{
+
+    list-style:none;
+
+    float:right;
+
+}
+
+
+
+#jmreport-page-notice .little-point-content .little-point li
+
+{
+
+    float:left; 
+
+    display:inline-block;
+
+    margin:5px;
+
+    width:10px;
+
+    height:10px;
+
+    background-color:#a3a3a3;
+
+    border-radius:5px;
+
+    cursor:default;
+
+    filter:alpha(opacity=50);
+
+    opacity:0.5;
+
+}
+
+
+
+#jmreport-page-notice .little-point-content .little-point li.alt-point
+
+{
+
+    filter:alpha(opacity=100);
+
+    opacity:1;
+
+}
+
+
+
+/*页面标题*/
+
+#jmreport-page-title {
+
+	height:40px;
+
+	/*background-image:url(../img/pagetitle_icon.png); margin:10px;*/
+	background-color:#d8d8d8;
+
+	background-repeat:no-repeat;
+
+	background-position:center left;
+
+	border-bottom:1px solid #b4b4b4;
+
+	overflow:hidden;
+
+	/*margin-bottom:20px;*/
+
+}
+
+ 
+
+#jmreport-page-title .jmreport-pageTitle
+
+{
+
+    height:40px;
+
+    line-height:40px;
+
+    float:left;
+
+    display:inline-block;
+
+    margin-left: 40px;
+
+	font-size: 16px;
+
+    font-weight : bold;
+
+	color:#323232;
+
+}
+
+
+
+/*页面菜单*/
+
+#jmreport-page-title .jmreport-pageMenu
+
+{
+
+    float:right;
+
+    list-style:none;
+
+    overflow:hidden;
+
+    margin-right:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+#jmreport-page-title .jmreport-pageMenu li
+
+{
+
+    height:40px;
+
+    float:left;
+
+    display:inline-block;
+
+    overflow:hidden;
+
+}
+
+
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon
+
+{
+
+    width:20px;
+
+    margin-right:5px;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    margin-left:20px;
+
+}
+
+
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.refresh
+
+{
+
+    background-image:url(../img/refresh-page.png);
+
+}
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.refresh:hover
+
+{
+
+    background-image:url(../img/refresh-page-cur.png);
+
+}
+
+
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.manager
+
+{
+
+    background-image:url(../img/manager.png);
+
+}
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.manager:hover
+
+{
+
+    background-image:url(../img/manager-cur.png);
+
+}
+
+
+
+
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.discription
+
+{
+
+    background-image:url(../img/discription.png);
+
+}
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-icon.discription:hover
+
+{
+
+    background-image:url(../img/discription-cur.png);
+
+}
+
+
+
+#jmreport-page-title .collection
+
+{
+
+    display:inline-block;
+
+    width:140px;
+
+    height:40px;
+
+    float:right;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer
+
+{
+
+    width:140px;
+
+    height:56px;
+
+    position:absolute;
+
+    background-color:#53616E;
+
+    margin-top:-1px;
+
+    margin-right:-2px;
+
+    border-radius:5px 0px 0px 5px
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .page-collection-title
+
+{
+
+        float:left;
+
+        display:inline-block;
+
+        height:56px;
+
+        line-height:56px;
+
+        font-size:16px;
+
+        color:#fff;
+
+        padding-left:10px;
+
+        display:none;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .text
+
+{
+
+    height:25px;
+
+    margin:20px 10px 0px 0px;
+
+    float:right;
+
+    display:inline-block;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .collectionIcon
+
+{
+
+    background-repeat:no-repeat;
+
+    width:38px;
+
+    height:40px;
+
+    margin:7px 10px 0px 0px;
+
+    padding-top:5px;
+
+    font-size:26px;
+
+    font-family:Arial;
+
+    color:#fff;
+
+    text-align:right;
+
+    float:right;
+
+    display:inline-block;
+
+    cursor:pointer;
+
+    background-image:url(../img/collection.png);
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .collectionIcon.open
+
+{
+
+    background-position:0px -40px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .collectionIcon.close
+
+{
+
+    background-position:0px -0px;
+
+}
+
+
+
+#jmreport-page-title .collection .page-collection-continer .listLayer
+
+{
+
+    background-color:#fff;
+
+    position:absolute;
+
+    border:1px solid #53616E;
+
+    width:385px;
+
+    z-index:100;
+
+    margin-top:50px;
+
+    overflow:hidden;
+
+    display:none;
+
+    background-color:#e4e4e4
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections
+
+{
+
+    list-style:none;
+
+    overflow:hidden;
+
+    margin:5px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .createCollBut
+
+{
+
+    display:block;
+
+    background-image:url(../img/creatColl-icon.png);
+
+    width:20px;
+
+    height:20px;
+
+    margin-top:4px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .createCollBut:hover
+
+{
+
+    background-image:url(../img/creatColl-icon-hover.png);
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .modifyCollBut
+
+{
+
+    display:block;
+
+    background-image:url(../img/editC.png);
+
+    width:20px;
+
+    height:20px;
+
+    margin-top:4px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .modifyCollBut:hover
+
+{
+
+    background-image:url(../img/editC_hover.png);
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections#createCollection
+
+{
+
+    display:none;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections#createCollection input
+
+{
+
+    border:1px solid #ccc;
+
+    width:223px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .item
+
+{
+
+    float:left;
+
+    height:30px;
+
+    line-height:30px;
+
+    padding:0px 5px 0px 5px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .item select
+
+{
+
+    width:223px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections .title
+
+{
+
+    font-weight:bold;
+
+    color:#333;
+
+    font-size:14px;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .collections a
+
+{
+
+    color:#59616c;
+
+    text-decoration:underline;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-setTimeOutTesk-but
+
+{
+
+    overflow:hidden;
+
+    height:30px;
+
+    line-height:30px;
+
+    font-size:14px;
+
+    text-align:center;
+
+    margin:0px 10px 10px 10px ;
+
+    border-radius: 5px ;
+
+    color:#56636C;
+
+    font-weight:bold;
+
+    background-color:#42b2bd;
+
+    cursor:pointer;
+
+    color:#f2f2f2;
+
+    -webkit-transition:all.1s linear .1s;
+
+    transition: all.1s linear .1s;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-setTimeOutTesk-but:hover
+
+{
+
+    background-color:#32929d;
+
+    color:#fff;
+
+    -webkit-transition:all.1s linear .1s;
+
+    transition: all.1s linear .1s;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-setTimeOutTesk-but:active
+
+{
+
+    box-shadow:0px 0px 10px #fff inset;
+
+    text-shadow:0px 0px 5px #000;
+
+    -webkit-transition: all .1s linear;
+
+    transition: all .1s linear;
+
+}
+
+
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-setTimeOutTesk-but img
+
+{
+
+    height:20px;
+
+    width:20px;
+
+    margin-left:5px;
+
+    margin-top:3px;
+
+}
+
+
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-chartList
+
+{
+
+    border-bottom:1px solid #53616E;
+
+    border-left:0px;
+
+    border-right:0px;
+
+    background-color:#d9f0f2;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
+}
+
+/*成功添加动画项目*/
+
+.jmreport-animationItem-suAdded
+
+{
+
+    height:80px;
+
+    width:500px;
+
+    background-color:#42b3bd;
+
+    color:#fff;
+
+    position:absolute;
+
+    top:0px;
+
+    left:0px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    background-image:url(../img/addItem-icon.png);
+
+    background-position:center right;
+
+    background-repeat:no-repeat;
+
+}
+
+.jmreport-animationItem-suAdded img
+
+{
+
+    width:20px;
+
+    height:20px;
+
+    margin-left:8px;
+
+}
+
+
+
+/*子项目*/
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-chartList>.item
+
+{
+
+    border-top:1px solid #53616E;
+
+    background-color:#fff;
+
+    overflow:hidden;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-chartList>.item.alt-row
+
+{
+
+    background-color:#FFFAF7;
+
+}
+
+.jmreport-collections-chartList>.item>.item-bigTitle
+
+{
+
+    height:22px;
+
+    line-height:22px;
+
+    color:#505050;
+
+    overflow:hidden;
+
+    margin:5px 0px;
+
+}
+
+.jmreport-collections-chartList>.item>.item-bigTitle>.left
+
+{
+
+    float:left;
+
+    margin-left:10px;
+
+    overflow:hidden;
+
+    background-color:transparent;
+
+    border:0px;
+
+    display:inline;
+
+}
+
+.jmreport-collections-chartList>.item>.item-bigTitle>.right
+
+{
+
+    float:right;
+
+    margin-right:10px;
+
+    display:none;
+
+}
+
+
+
+.jmreport-collections-chartList>.item>.item-bigTitle>input.left
+
+{
+
+    width:180px;
+
+}
+
+.jmreport-collections-chartList>.item>.item-bigTitle>input.left.modify
+
+{
+
+    height:18px;
+
+    line-height:18px;
+
+    background-color:#fff;
+
+    border:1px solid #454545;
+
+}
+
+
+
+.jmreport-collections-chartList>.item>.item-bigTitle>span.left.new
+
+{
+
+    font-style:italic;
+
+}
+
+.jmreport-collections-chartList>.item:hover .right
+
+{
+
+    display:inline; 
+
+    cursor:pointer;
+
+}
+
+
+
+.jmreport-collections-chartList>.item>.item-smallTitle
+
+{
+
+    height:22px;
+
+    line-height:22px;
+
+    color:#ccc;
+
+    overflow:hidden;
+
+    margin:5px 10px 5px 10px;
+
+}
+
+.jmreport-collections-chartList .jmreport-collections-List-null
+
+{
+
+    border-top:1px solid #53616E;
+
+    height:60px;
+
+    line-height:60px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+/*子项目 结束*/
+
+
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-closeBut
+
+{
+
+    text-align:right;
+
+    height:40px;
+
+    line-height:40px;
+
+    width:70px;
+
+    display:inline-block;
+
+    background-image:url(../img/closeMailUi.png);
+
+    background-position:-7px 0px;
+
+    background-repeat:no-repeat;
+
+    cursor:pointer;
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-deleted
+
+{
+
+    display:inline-block;
+
+    float:right;
+
+    font-size:14px;
+
+    height:40px;
+
+    line-height:40px;
+
+    padding:0px 8px 0px 8px
+
+}
+
+#jmreport-page-title .collection .page-collection-continer .listLayer .jmreport-collections-deleted a
+
+{
+
+    color:#4D90AD;
+
+    font-size:14px;
+
+    margin-left:3px;
+
+}
+
+
+
+#jmreport-page-title .jmreport-pageMenu li.jmreport-pageMenu-content
+
+{
+
+    font-size:14px;
+
+    color:#3d3d3d;
+
+    height:40px;
+
+    line-height:40px;
+
+}
+
+
+
+
+
+/* 工具栏 */
+
+#jmreport-page-toolbar {
+
+	padding: 12px 15px 12px 4px;
+
+	overflow: hidden;
+
+}
+
+
+
+#jmreport-page-toolbar .controls ul.jmreport-controls
+
+{
+
+    margin:5px 0px 0px 0px;
+
+    list-style:none;
+
+    overflow:hidden;
+
+}
+
+
+
+#jmreport-page-toolbar .controls ul li.jmreport-controls-item
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+    margin-left:10px;
+
+    overflow:hidden;
+
+    
+
+}
+
+
+
+#jmreport-page-toolbar .controls ul .jmreport-controls-submit
+
+{
+
+    height:30px;
+
+    padding:0px 20px 0px 20px;
+
+    line-height:30px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    background-color:#157fe2;
+
+    float:left;
+
+    display:inline-block;
+
+    color:#f2f2f2;
+
+    border-radius: 5px 5px 5px 5px;
+
+    cursor:pointer;
+
+    margin-left:5px;
+
+    -webkit-transition: all .1s linear;
+
+    transition: all .1s linear;
+
+}
+
+
+
+#jmreport-page-toolbar .controls ul .jmreport-controls-submit:hover
+
+{
+
+    background-color:#009D91;
+
+    -webkit-transition: all .1s linear;
+
+    transition: all .1s linear;
+
+}
+
+
+
+#jmreport-page-toolbar .controls ul .jmreport-controls-submit:active
+
+{
+
+    box-shadow:0px 0px 10px #fff inset;
+
+    text-shadow:0px 0px 5px #000;
+
+    -webkit-transition: all .1s linear;
+
+    transition: all .1s linear;
+
+}
+
+
+
+/*单个控件结构*/
+
+.jmreport-toolbar-singl
+
+{
+
+    list-style:none;
+
+    overflow:hidden;
+
+}
+
+.jmreport-toolbar-singl .jmreport-toolbar-singl-item
+
+{
+
+    float:left;
+
+    overflow:hidden;
+
+    display:inline-block;
+
+    height:30px;
+
+    line-height:30px;
+
+    margin-right:5px;
+
+}
+
+
+
+.jmreport-toolbar-singl .jmreport-toolbar-singl-item .jmreport-toolbar-lable
+
+{
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+
+
+.jmreport-toolbar-singl .jmreport-toolbar-singl-item input
+
+{
+
+    height:28px;
+
+    line-height:28px;
+
+    border:1px solid #b4b4b4;
+
+    padding:0px;
+
+    padding-left:3px;
+
+    width:100px;
+
+    border-radius:4px;
+
+}
+
+.jmreport-toolbar-singl .jmreport-toolbar-singl-item select
+
+{
+
+    display:none;
+
+}
+
+/*下拉框控件*/
+
+.jmreport-selectBox-absoluteLay
+
+{
+
+    display:none;
+
+    position:absolute;
+
+    top:0px;
+
+    left:0px;
+
+    border:1px solid #42b2bd;
+
+    float:left;
+
+    background-color:#fff;
+
+    z-index:3;
+
+    max-height:400px;
+
+    max-width:500px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;    
+
+}
+
+.jmreport-selectBox-absoluteLay .item
+
+{
+
+    display:block;
+
+    overflow:hidden;
+
+    height:25px;
+
+    line-height:25px;
+
+    color:#454545;
+
+    padding:0px 5px 0px 5px;
+
+    cursor:pointer;
+
+    -webkit-transition:all .1s linear; 
+
+    transition: all .1s linear;
+
+    white-space:nowrap;
+
+}
+
+.jmreport-selectBox-absoluteLay .item:hover
+
+{
+
+    color:#fff;
+
+    background-color:#5A5CA8;
+
+    -webkit-transition:all .1s linear; 
+
+    transition: all .1s linear;
+
+}
+
+.jmreport-selectBox-absoluteLay .item:active
+
+{
+
+    box-shadow:0px 0px 5px #8586BF inset;
+
+    text-shadow:0px 2px 5px #000;
+
+    -webkit-transition:all .1s linear; 
+
+    transition:all .1s linear;
+
+}
+
+.jmreport-selectBox-absoluteLay .item[selected=selected]
+
+{
+
+    color:#fff;
+
+    background-color:#AD5656;
+
+    -webkit-transition:all .1s linear; 
+
+    transition:all .1s linear;
+
+}
+
+
+
+/*水平排列选项框工具栏控件*/
+
+#jmreport-page-toolbar .jmreport-horizontallistbox 
+
+{
+
+    display:inline-block;
+
+	list-style: none;
+
+	border-right:1px solid #32929D;
+
+	overflow: hidden;
+
+}
+
+#jmreport-page-toolbar .jmreport-horizontallistbox li {
+
+	cursor: pointer;
+
+	border:1px solid #32929D;
+
+	border-right:0px;
+
+	height:28px;
+
+	line-height:28px;
+
+	padding:0px 5px 0px 5px;
+
+	display:inline-block;
+
+	color:#999;
+
+	-webkit-transition: all .1s linear;
+
+    transition: all .1s linear;
+
+}
+
+#jmreport-page-toolbar .jmreport-horizontallistbox li.selected {
+
+	background-color: #e4e4e4;
+
+	color:#333;
+
+	font-weight:bold;
+
+}
+
+#jmreport-page-toolbar .jmreport-horizontallistbox li.allSelectBut
+
+{
+
+	border:1px solid #32929D;
+
+	margin-right:10px
+
+}
+
+#jmreport-page-toolbar .jmreport-horizontallistbox li.allSelectBut:active
+
+{
+
+    background-color: #e4e4e4;
+
+	color:#333;
+
+	font-weight:bold;
+
+}
+
+
+
+/*月份选择控件*/
+
+.jmreport-toobarMonthOne-selecter {
+
+	position: absolute;
+
+	padding: 4px;
+
+	border: #42b2bd 1px solid;
+
+	background-color: #F2F5F7;
+
+	width: 160px;
+
+    color:#058DC7;
+
+}
+
+
+
+.jmreport-toobarMonthOne-selecter .yearheader {
+
+	overflow: hidden;
+
+	padding: 4px;
+
+}
+
+.jmreport-toobarMonthOne-selecter .yearheader > a.pre {
+
+	float: left;
+
+	color:#058DC7;
+
+	text-decoration:none;
+
+}
+
+.jmreport-toobarMonthOne-selecter .yearheader > span.thisyear
+
+{
+
+    margin-left:10px;
+
+    color:#058DC7;
+
+}
+
+.jmreport-toobarMonthOne-selecter .yearheader > a.next {
+
+	float: right;
+
+	color:#058DC7;
+
+	text-decoration:none;
+
+}
+
+.jmreport-toobarMonthOne-selecter div.monthbody {
+
+	overflow: hidden;
+
+	margin: 0 auto;
+
+}
+
+.jmreport-toobarMonthOne-selecter a.month {
+
+	width: 20px;
+
+	line-height: 20px;
+
+	font-size: 14px;
+
+	margin: 2px;
+
+	text-align: center;
+
+	border: 1px solid #42b2bd;
+
+	float: left;
+
+    color:#058DC7;	
+
+    text-decoration:none;
+
+}
+
+.jmreport-toobarMonthOne-selecter a.month:hover,
+
+.jmreport-toobarMonthOne-selecter a.current {
+
+	background-color: #ddd;
+
+}
+
+
+
+/*半年选择控件*/
+
+.jmreport-toobarhalfaYearOne-selecter {
+
+	position: absolute;
+
+	padding: 4px;
+
+	border: #717171 1px solid;
+
+	background-color: #F2F5F7;
+
+	width: 160px;
+
+
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter .yearheader {
+
+	overflow: hidden;
+
+	padding: 4px;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter .yearheader > a.pre {
+
+	float: left;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter .yearheader > span.thisyear
+
+{
+
+    margin-left:10px;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter .yearheader > a.next {
+
+	float: right;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter div.monthbody {
+
+	overflow: hidden;
+
+	margin: 0 auto;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter a.month {
+
+	line-height: 20px;
+
+	font-size: 14px;
+
+	margin: 2px;
+
+	padding:2px;
+
+	text-align: center;
+
+	border: 1px solid #ccc;
+
+	float: left;
+
+}
+
+.jmreport-toobarhalfaYearOne-selecter a.month:hover,
+
+.jmreport-toobarhalfaYearOne-selecter a.current {
+
+	background-color: #ddd;
+
+}
+
+
+
+/*报表页*/
+
+#jmreport-page-content {
+
+	margin: 0;
+
+	border:0;
+
+	background-color: transparent;
+
+}
+
+/*报表tab页*/
+
+#jmreport-page-content .jmreport-content-tabitem {
+
+	padding:0;
+
+}
+
+#jmreport-page-content table.jmreport-template {
+
+	width: 100%;
+
+}
+
+#jmreport-page-content table.jmreport-template>thead>tr>th {
+
+	border: 0;
+
+}
+
+#jmreport-page-content table.jmreport-template>tbody>tr>td {
+
+    border: 0;
+
+    vertical-align:top;
+
+}
+
+
+
+/**
+
+ * 弹窗页面
+
+ */
+
+.jmreport-poppage 
+
+{
+
+    padding:20px;
+
+	background-color: #fff;
+
+	overflow-y:scroll;
+
+}
+
+.jmreport-poppage .boldDiv{ font-weight:bold; margin-bottom:10px; margin-top:10px; font-size:16px; }
+
+/**
+
+ * 嵌套的页面
+
+ */
+
+.jmreport-poppage > iframe {
+
+	width: 100%;
+
+	border:0;
+
+}
+
+
+
+/*控件项样式*/
+
+.jmreport-chart-TextTooltip
+
+{
+
+    display:block;
+
+    float:left;
+
+    overflow:hidden;
+
+    border:1px solid #42b2bd; 
+
+    padding:3px 5px 3px 5px;
+
+    position:fixed;
+
+    left:0px;
+
+    top:0px;
+
+    background-color:#fff;
+
+    color:#058DC7;
+
+    max-width:500px
+
+}
+
+
+
+.single-chart-content
+
+{
+
+    overflow:hidden;
+
+    border:1px solid #ccc;
+
+    margin:10px;
+
+}
+
+.content-control-item 
+
+{
+
+	background-color: #fff;
+
+	padding: 0;
+
+	min-width: 100px;
+
+	min-height: 60px;
+
+	position: relative;
+
+	overflow: hidden;
+
+    /*background-image: url(../../../Servers/sy.ashx);*/
+
+}
+
+.content-control-item .log
+
+{
+
+    color:#ED561B;
+
+    margin:10px;
+
+}
+
+
+
+/*大数据表格控件*/
+
+#jmreport-page-content table.jmreport-gridViewData-bigData
+
+{
+
+    position:absolute;
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData-bigData th,#jmreport-page-content table.jmreport-gridViewData-bigData td 
+
+{
+
+    white-space:nowrap;
+
+    padding:4px 10px;
+
+    border: 1px solid #ddd;
+
+	border-left: 0;	
+
+	border-bottom: 0;
+
+}
+
+
+
+
+
+
+
+/*廖力修改 开始-2013/9/12*/
+
+/*表格控件*/
+
+#jmreport-page-content table.jmreport-gridViewData {
+
+	position:absolute;
+
+	width: 100%;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData tr.jmreport-max-data-alt th,#jmreport-page-content table.jmreport-gridViewData-bigData tr.jmreport-max-data-alt th
+
+{
+
+    border-bottom:1px solid #ccc;
+
+    background-color:#EB792A;
+
+    color:#fff;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData th,#jmreport-page-content table.jmreport-gridViewData td {
+
+	height:29px;
+
+	line-height:29px;
+
+	text-align:center;
+
+	font-size: 12px;
+
+	border: 1px solid #ccc;
+
+	border-left: 0;	
+
+	border-bottom: 0;
+
+	vertical-align: middle;	
+
+	padding:0px 10px;
+
+	overflow:hidden;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData tfoot td
+
+{
+
+    height:0px;
+
+    line-height:0px;
+
+    border:0px;
+
+    padding:0px;
+
+} 
+
+#jmreport-page-content table.jmreport-gridViewData tfoot td div{margin:0px}
+
+#jmreport-page-content table.jmreport-gridViewData th ,#jmreport-page-content table.jmreport-gridViewData-bigData th{
+
+	font-size: 14px;
+
+	color: #454545;	
+
+	font-weight:bold;
+
+	border-top: 0;
+
+	cursor:default;
+
+    white-space:nowrap;
+
+    background-color:#eee;
+
+    
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData tr.alt-row {
+
+	background-color: #fcfcfc;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData td {
+
+	white-space:nowrap;
+
+	overflow:hidden;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData .cos
+
+{
+
+	border-bottom:1px solid #ccc;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData a ,.tooltipLink{
+
+    color:#058DC7;
+
+    text-decoration:underline;
+
+    cursor:url(../img/in.ani),url(../img/in.gif),pointer;
+
+
+
+}
+
+.noclipIcon
+
+{
+
+    position:absolute;
+
+    top:0px;
+
+    left:0px;
+
+    z-index:99;
+
+    cursor:url(../img/in.ani),url(../img/in.gif),pointer;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .cDescription
+
+, #jmreport-page-content table.jmreport-gridViewData span.cDescription
+
+{
+
+    text-align:center;
+
+     overflow:hidden;
+
+     line-height:12px;
+
+     padding:0px;
+
+     font-family:微软雅黑;
+
+     color:#86bbc1;
+
+     border:1px solid #86bbc1;
+
+     background-color:#fff;
+
+     font-size:12px;
+
+     border-radius:8px; 
+
+     margin-left:5px;
+
+     width: 12px;
+
+     height: 12px;
+
+     display: inline-block;
+
+     cursor:default;
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData .weekend-row
+
+{
+
+    background-image:url(../img/jmreport-table-WeekendBackground.png)
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData tr.alt-row
+
+{
+
+    background-color:#f6f6f6
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData tr.alt-row:hover td,
+
+#jmreport-page-content table.jmreport-gridViewData tr:hover td{
+
+    background-color:#FFB073;
+
+    border-color:#FF9340;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData div.DisplayPre
+
+{
+
+    background-color:#d4edcc;
+
+    height:24px;
+
+    margin-left:3px;    
+
+    z-index:0;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData div.displayAgent
+
+{
+
+    position:relative;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData div.preValue
+
+{
+
+    position:absolute;
+
+    color:#50b432;
+
+    width:inherit;
+
+    font-weight:bold;
+
+    margin-top:-3px;
+
+    padding-left:5px;
+
+    z-index:1;    
+
+    width:100%;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData td.DisplayPre
+
+{
+
+    margin:0px;
+
+    padding:0px;
+
+    min-width:70px;
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData th.jmreport-mulLineTh
+
+{
+
+    line-height:normal;
+
+}
+
+
+
+#jmreport-page-content table.jmreport-gridViewData th.jmreport-mulLineTh p
+
+{
+
+    margin:0px;
+
+    text-align:left;
+
+}
+
+
+
+/*廖力修改 结束-2013/9/12*/
+
+
+
+/*廖力编写 开始-2013/9/12*/
+
+/*表格统计的标签*/
+
+#jmreport-page-content table.jmreport-gridViewData td.combin
+
+{
+
+	padding:0px;
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData td.combin div
+
+{
+
+	font-size:12px; 
+
+	padding:0px; 
+
+	margin:0px; 
+
+	text-align:center; 
+
+	font-weight:bold
+
+}
+
+#jmreport-page-content table.jmreport-gridViewData td.combin div.combinLable
+
+{
+
+	position:absolute; 
+
+	margin-top:0px; 
+
+	padding:2px 2px; 
+
+	color:#454545; 
+
+	font-weight:normal;
+
+}
+
+
+
+/*廖力编写 结束-2013/9/12*/
+
+
+
+
+
+/*控件标题*/
+
+#jmreport-page-content div.content-control-menu {
+
+	overflow:hidden;
+
+	height:30px;
+
+	line-height:30px;
+
+	border-bottom:1px solid #ccc;
+
+	
+
+}
+
+
+
+#jmreport-page-content span.content-control-title{
+
+	font-size: 14px;
+
+	color:#555;
+
+	font-weight: bold;
+
+	float:left;
+
+	display:inline-block;
+
+	padding-left:10px;
+
+}
+
+
+
+#jmreport-page-content span.content-control-title.fold
+
+{
+
+    background-position:left center;
+
+    background-repeat:no-repeat;
+
+    padding-left:22px;
+
+    cursor:pointer;
+
+    margin:0px 0px 0px 10px;
+
+}
+
+#jmreport-page-content span.content-control-title.fold.down
+
+{
+
+    background-image: url(../img/arrow-fold-down.png);
+
+}
+
+#jmreport-page-content span.content-control-title.fold.up
+
+{
+
+    background-image: url(../img/arrow-fold-up.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent
+
+{
+
+    margin-right:10px;
+
+    padding-top:5px;
+
+    float:right;
+
+    display:inline-block;
+
+    list-style:none;
+
+    overflow:hidden;
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent li
+
+{
+
+    background-repeat:no-repeat;
+
+    width:20px;
+
+    height:20px;
+
+    overflow:hidden;
+
+    float:left;
+
+    display:inline-block;
+
+    margin-left:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+/*.highcharts-container{ margin-top:20px;margin-bottom:10px; margin-left:20px; margin-right:10px;}
+
+.chart .highcharts-container, .jmreport-poppage .highcharts-container{ margin-top:0px;margin-bottom:0px; margin-left:0px; margin-right:0px;}*/
+
+
+
+/*小菜单样式*/
+
+.moreMenu-content
+
+{
+
+    display:none;
+
+    position:absolute;
+
+    z-index:99;
+
+    margin-top:-6px;
+
+    margin-left:-91px;
+
+    width:0px;
+
+}
+
+
+
+
+
+.moreMenu-icon
+
+{
+
+    background: url(../img/moreDir.png);
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    width:38px;
+
+    height:31px;
+
+    border-left:1px solid #ccc;
+
+    background-color:#f2f2f2;
+
+    margin:1px 1px 0px 0px;
+
+    position:absolute;
+
+    margin-left:82px;
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .moreDir-moreMenu
+
+{
+
+     clear:both;
+
+     display:block;
+
+     list-style:none;
+
+     padding:0px;
+
+     margin:0px;
+
+     width:120px;
+
+     border:1px solid #ccc;
+
+     background-color:#f2f2f2;
+
+     margin-top:31px;
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .moreDir-moreMenu li
+
+{
+
+     float:none;
+
+     width:auto;
+
+     display:list-item;
+
+     height:30px;
+
+     line-height:30px;
+
+     font-size:14px;
+
+     margin:0px 8px;
+
+     text-align:center
+
+}
+
+#jmreport-page-content ul.content-control-menuContent .moreDir-moreMenu li:hover {
+
+    color: #306DC3;
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-plus
+
+{
+
+    background: url(../img/plus.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-plus:hover
+
+{
+
+    background: url(../img/plus_hover.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-refesh
+
+{
+
+    background: url(../img/refesh.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-downLoadxls
+
+{
+
+    background: url(../img/export_xsl.png);
+
+}
+
+#jmreport-page-content ul.content-control-menuContent .content-control-upLoaddata
+
+{
+
+    background: url(../img/uport_data.png);
+
+}
+
+
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-moreDir
+
+{
+
+    background: url(../img/moreDir.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-refesh:hover
+
+{
+
+    background: url(../img/refesh_hover.png);
+
+}
+
+
+
+#jmreport-page-content ul.content-control-menuContent .content-control-downLoadxls:hover
+
+{
+
+    background: url(../img/export_xsl_hover.png);
+
+}
+
+#jmreport-page-content ul.content-control-menuContent .content-control-upLoaddata:hover
+
+{
+
+    background: url(../img/uport_data_hover.png);
+
+}
+
+#jmreport-page-content ul.content-control-menuContent .content-control-moreDir:hover .moreMenu-content
+
+{
+
+    display:block;
+
+}
+
+
+
+/*加载中遮挡层*/
+
+.jmreport-loading-modal {
+
+	position:absolute;
+
+	width:100%;
+
+	height:100%;
+
+	top:0;
+
+	left:0;
+
+	background-color: #fff;
+
+	opacity:0.5;
+
+	z-index:1;
+
+}
+
+.jmreport-loading {
+
+	position:absolute;
+
+	width:100%;
+
+	height:100%;
+
+	top:0;
+
+	left:0;
+
+	z-index:2;
+
+	background: url(../img/loading.gif) 45% 40% no-repeat;
+
+}
+
+
+
+/*关健节点信息，同环比等*/
+
+.jmreport-itemCompareList {
+
+	padding: 0px 8px;
+
+	list-style: none;
+
+	overflow: hidden;
+
+}
+
+.jmreport-itemCompareList > li {
+
+	margin: 0px 8px;
+
+	float: left;
+
+	border-right: 1px solid #ddd;
+
+}
+
+.jmreport-itemCompareList > li.last {
+
+	border-right: 0;
+
+}
+
+/* 对比控件单项*/
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item {
+
+
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item > li {
+
+	margin: 8px 0;
+
+	margin-right: 15px;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item > li.item-title {
+
+	font-size: 14px;
+
+	color:#333;
+
+	cursor:default;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item > li.item-value {
+
+	font-size: 30px;
+
+	font-weight: 700;
+
+}
+
+/*单位*/
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item > li.item-value em {
+
+	font-size: 18px;
+
+	font-weight: 600;
+
+	font-style:normal;
+
+}
+
+/*比值*/
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .compare-item 
+
+{
+
+    margin-bottom:10px;
+
+	font-size: 12px;	
+
+	display: block;
+
+	overflow: hidden;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .compare-item label {
+
+	display:inline;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .compare-item span 
+
+{
+
+    margin-left:10px;
+
+	display:inline;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .compare-item span.red {
+
+	color: #ff6d6d;
+
+}
+
+.jmreport-itemCompareList .jmreport-itemCompareList-item .compare-item span.green {
+
+	color: #77b894;
+
+}
+
+
+
+
+
+/*廖力编写 开始-2013/9/12*/
+
+/*分页*/
+
+.PageCountPanel
+
+{
+
+	border-top:1px solid #ccc;
+
+	 padding:6px; 
+
+	 font-size:12px; 
+
+	 font-family:Arial; 
+
+	 overflow:hidden; 
+
+}
+
+.PageCount
+
+{
+
+    margin:0px auto 0px auto;
+
+    padding:0px 0px 0px 0px;
+
+    list-style:none;  
+
+    height:25px;
+
+    line-height:25px; 
+
+    color:#ccc 
+
+}
+
+.PageCount li
+
+{
+
+    margin:0px 0px 0px 0px; 
+
+    padding:0px 0px 0px 0px; 
+
+    float:right; 
+
+    display:inline-block;
+
+    text-align:center  
+
+}
+
+.PageCount li a
+
+{
+
+    display:inline-block; 
+
+    text-align:center; 
+
+    margin-right:10px; 
+
+    color:#000; 
+
+    cursor:pointer ;
+
+}
+
+.PageCount li span
+
+{
+
+    display:inline-block; 
+
+    text-align:center; 
+
+    margin-right:10px;
+
+}
+
+.PageCount li .selectedA
+
+{
+
+    background-color:#ccc; 
+
+    border:1px solid #ddd;
+
+    color:#000;
+
+    font-weight:bold;
+
+    border-radius:14px 14px; 
+
+    width:25px; 
+
+}
+
+/*廖力编写 结束-2013/9/12*/
+
+
+
+/*下拉多选框*/
+
+.jmreport-CheckBoxList
+
+{
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+.jmreport-CheckBoxList:hover .jmreport-CheckBoxList-left
+
+{
+
+    border:1px solid #1D766F;
+
+    -webkit-transition:all .1s linear .1s; transition:  all .1s linear .1s;
+
+}
+
+
+
+
+
+  
+
+.jmreport-CheckBoxList-left
+
+{
+
+    background-color:#fff;
+
+    max-width:300px;
+
+    height:28px;
+
+    border:1px solid #1D766F;
+
+    line-height:28px;
+
+    padding:0px 5px 0px 5px;
+
+    overflow:hidden;
+
+    display:inline-block;
+
+    float:right;
+
+    -webkit-transition:all .1s linear .1s; transition:  all .1s linear .1s;
+
+    border-bottom-left-radius:4px;
+
+    border-top-left-radius:4px;
+
+}
+
+.jmreport-CheckBoxList-right
+
+{
+
+    border:1px solid #1D766F;
+
+    border-left:0px;
+
+    background-image:url(../img/selecter_down.png);
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    width:28px;
+
+    height:28px;
+
+    line-height:30px;
+
+    text-align:center;
+
+    background-color:#fff;
+
+    overflow:hidden;
+
+    display:inline-block;
+
+    float:right;
+
+    -webkit-transition:all .1s linear .1s; transition:  all .1s linear .1s;
+
+    border-bottom-right-radius:4px;
+
+    border-top-right-radius:4px;
+
+}
+
+
+
+.jmreport-CheckBoxList:hover .jmreport-CheckBoxList-right
+
+{
+
+    border-color:#1D766F;
+
+    background-color:#F2F2F2;
+
+    -webkit-transition:all .1s linear .1s; transition:  all .1s linear .1s;
+
+}
+
+
+
+.jmreport-CheckBoxList-absoluteLay
+
+{   
+
+    display:none;
+
+    overflow:hidden;
+
+    overflow-y:auto;
+
+    max-height:400px;
+
+    position:absolute;
+
+    border:1px solid #1D766F;
+
+    background-color:#fff;
+
+    max-width:1200px;
+
+    z-index:3;
+
+    border-radius:4px;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay .title
+
+{
+
+     height:24px;
+
+     line-height:24px;
+
+     margin:4px;
+
+     width:auto;
+
+     /*border-bottom:1px solid #ccc;*/
+
+     text-align:right;
+
+     min-width:200px;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay .title a
+
+{
+
+    cursor:pointer;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay .title.one
+
+{
+
+    min-width:0px;
+
+ }
+
+.jmreport-CheckBoxList-absoluteLay input.search
+
+{
+
+    border:1px solid #ccc;
+
+    float:left;
+
+    height:18px;
+
+    border-radius:4px;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span
+
+{
+
+    background-image:url(../img/jmreport-selectList-item.png);
+
+    background-position:left center;
+
+    background-repeat:no-repeat;
+
+    display:block;
+
+    overflow:hidden;
+
+    height:25px;
+
+    line-height:25px;
+
+    color:#454545;
+
+    padding:0px 5px 0px 28px;
+
+    cursor:pointer;
+
+    -webkit-transition:all .1s linear; 
+
+    transition: all .1s linear;
+
+    min-width:80px;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span.one
+
+{
+
+    background-image:none;
+
+    padding:0px 5px 0px 5px;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span:hover
+
+{
+
+    color:#fff;
+
+    background-color:#009D91;
+
+    -webkit-transition:all .1s linear; 
+
+    transition: all .1s linear;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span:active
+
+{
+
+    box-shadow:0px 0px 5px #8586BF inset;
+
+    text-shadow:0px 2px 5px #000;
+
+    -webkit-transition:all .1s linear; 
+
+    transition:all .1s linear;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span[selected=selected]
+
+{
+
+    background-image:url(../img/jmreport-selectList-selected.png);
+
+    color:#fff;
+
+    background-color:#F18A00;
+
+    margin-top:1px;
+
+    -webkit-transition:all .1s linear; 
+
+    transition:all .1s linear;
+
+}
+
+.jmreport-CheckBoxList-absoluteLay span[selected=selected].one
+
+{
+
+    background-image:none;
+
+}
+
+
+
+
+
+/*左键菜单的样式*/
+
+.eprChart_Context
+
+{
+
+    list-style:none;
+
+    background-color:#eee;
+
+    overflow:hidden;
+
+    border:1px solid #2f7ed8;
+
+    border-radius:5px 5px;
+
+    box-shadow:0px 1px 4px #000;
+
+    margin:0px;
+
+    padding:0px;
+
+    position:absolute;
+
+    z-index:9999;
+
+    top:0px;
+
+    left:0px;
+
+}
+
+.eprChart_Context li
+
+{
+
+    overflow:hidden;
+
+    padding:0px;
+
+    margin:0px;
+
+}
+
+.eprChart_Context li a
+
+{
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    padding:5px 10px;
+
+    display:block;
+
+    font-size:12px;
+
+    color:#454545;
+
+}
+
+.eprChart_Context li a:hover
+
+{
+
+    color:#fff;
+
+    background-color:#2f7ed8
+
+}
+
+
+
+/*带图表的表格控件*/
+
+table.jmreport-gridSparkLine {
+
+
+
+}
+
+table.jmreport-gridSparkLine td {
+
+	padding:0 4px!important;
+
+}
+
+table.jmreport-gridSparkLine td b {
+
+	font-weight: bold;
+
+}
+
+table.jmreport-gridSparkLine td span {
+
+	color: #81817E;
+
+	display: inline-block;
+
+	margin: 4px 8px;
+
+}
+
+
+
+/*菜单栏帮助*/
+
+.jmreport-help-Div
+
+{
+
+    overflow:hidden;
+
+    position:absolute;
+
+    left:0px;
+
+    top:0px;
+
+    z-index:999;
+
+    background-color:#fff;
+
+    width:auto;
+
+    float:left;
+
+    border-radius:5px 5px;
+
+    box-shadow:0px 1px 4px #000;
+
+    display:none;
+
+}
+
+/*菜单栏帮助 下的表格结构*/
+
+.jmreport-help-Div .jmreport-help-Div-table
+
+{
+
+    border:1px solid #ccc;
+
+    border-right:0px;
+
+    border-top:0px
+
+}
+
+
+
+.jmreport-help-Div .jmreport-help-Div-table tbody tr td,.jmreport-help-Div-table thead tr th
+
+{ 
+
+    border:1px solid #ccc;
+
+    border-left:0px;
+
+    border-bottom:0px;
+
+    padding:0px 10px;
+
+}
+
+
+
+.jmreport-help-Div-table thead tr th
+
+{
+
+    font-weight:bold;
+
+}
+
+
+
+/*label控件样式*/
+
+.jmreport-control-label {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    display: block;
+
+    width: 90%;
+
+    line-height: 40px;
+
+}
+
+
+
+/*linkButton控件样式*/
+
+.jmreport-control-linkButton
+
+{
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    display: block;
+
+    width: 90%;
+
+    line-height: 40px;
+
+}
+
+
+
+/*sql执行情况的控件样式*/
+
+.dev-message
+
+{
+
+    margin:20px;
+
+}
+
+
+
+/*sql执行情况的控件样式*/
+
+.jmreport-sql-infomaition 
+
+{
+
+    overflow:hidden;
+
+    color:#5c5c5c;
+
+}
+
+
+
+.jmreport-sql-infomaition .infomaition-item
+
+{
+
+    overflow:hidden;
+
+    float:left;
+
+    display:inline-block;
+
+    margin-right:30px;
+
+}
+
+
+
+.jmreport-sql-infomaition .infomaition-item .infomaition-icon
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+    height:60px;
+
+    width:60px;
+
+}
+
+.jmreport-sql-infomaition .infomaition-item .infomaition-content
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+    margin-left:10px;
+
+}
+
+.jmreport-sql-infomaition .infomaition-item .infomaition-content p
+
+{
+
+    margin:3px 0px 0px 0px;
+
+    padding:0px;
+
+}
+
+.jmreport-sql-infomaition .infomaition-item .infomaition-content p span.content
+
+{
+
+    font-size:30px;
+
+    margin-right:5px;
+
+    font-family:Arial;
+
+    font-weight:bold;
+
+}
+
+.jmreport-sql-infomaition .infomaition-item .infomaition-content p span.errorSp
+
+{
+
+    color:#d56221;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+
+
+/*错误信息框*/
+
+.jmreport-infomation-errorMessage-head
+
+{
+
+    margin-top:20px;
+
+    border:1px dashed #42b2bd;
+
+    padding:5px;
+
+    text-align:center;
+
+    color:#5c5c5c;
+
+}
+
+.jmreport-infomation-errorMessage-body
+
+{
+
+    border:1px dashed #42b2bd;
+
+    border-top:0px;
+
+    padding:10px;
+
+    text-align:left;
+
+    color:#5c5c5c;
+
+}
+
+
+
+/*预览的样式*/
+
+.modify-collectionItem-title
+
+{
+
+    text-align:center;
+
+    background-color:#e4e4e4;
+
+    border-bottom:1px solid #42b3bd ;
+
+    display:none;
+
+}
+
+.modify-collectionItem-title input
+
+{
+
+    overflow:hidden;
+
+    width:94%;
+
+    height:25px;
+
+    padding-left:5px;
+
+    padding:0px;
+
+    margin:5px;
+
+    background-color:transparent;
+
+    border:0px;
+
+}
+
+.modify-collectionItem-title input:hover,.modify-collectionItem-title input.cur
+
+{
+
+    background-color:#fff;
+
+    border:1px solid #ccc;
+
+}
+
+
+
+.modify-discriptionContent
+
+{
+
+    text-align:center;
+
+    background-color:#e4e4e4;
+
+    border-top:1px solid #42b3bd ;
+
+    display:none;
+
+}
+
+.modify-discriptionContent textarea
+
+{
+
+    overflow:hidden;
+
+    width:94%;
+
+    height:75px;
+
+    padding-left:5px;
+
+    padding:0px;
+
+    margin:5px;
+
+    background-color:transparent;
+
+    border:0px;
+
+}
+
+.modify-discriptionContent textarea:hover,.modify-discriptionContent textarea.cur
+
+{
+
+    background-color:#fff;
+
+    border:1px solid #ccc;
+
+}
+
+.modify-options
+
+{
+
+    background-color:#42B2BD;
+
+    overflow:hidden;
+
+    display:none;
+
+}
+
+.modify-options ul
+
+{
+
+    overflow:hidden;
+
+    list-style:none;
+
+    margin:30px;
+
+    color:#fff;
+
+}
+
+.modify-options ul li
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+}
+
+.modify-options ul li.saveli
+
+{
+
+    float:right;
+
+}
+
+.modify-options ul li.optionli
+
+{
+
+    margin-left:50px;
+
+}
+
+.modify-options ul li.saveli input
+
+{
+
+    background-color:#fff;
+
+    padding:5px 10px;
+
+    color:#59616C;
+
+    font-weight:bold;
+
+    border:0px;
+
+    border-radius: 5px;
+
+}
+
+/*整页加载样式*/
+
+.jmreport-allPage-loading
+
+{
+
+    background-image:url(../img/white/BLackSkin.png);
+
+    top:0px;
+
+    left:0px;
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:99999;
+
+    text-align:center;
+
+}
+
+.jmreport-allPage-loading img
+
+{
+
+    margin:0px auto 0px auto;
+
+}
+
+
+
+
+
+/*弹出窗口插件的样式*/
+
+div.jmreport-window
+
+{
+
+    overflow:hidden;
+
+    -webkit-transform-origin: top left 0;
+
+    -moz-transform-origin: top left 0;
+
+    transform-origin: top left 0;
+
+}
+
+div.jmreport-window>div.jmreport-window-title
+
+{
+
+    height:40px;
+
+    background-color:#6593A9;
+
+    overflow:hidden;
+
+}
+
+div.jmreport-window>div.jmreport-window-title>div.title
+
+{
+
+    display:inline-block;
+
+    float:left;
+
+    height:40px;
+
+    line-height:40px;
+
+    margin-left:10px;
+
+    font-size:16px;
+
+    color:#fff;
+
+}
+
+
+
+div.jmreport-window>div.jmreport-window-title>div.close
+
+{
+
+    float:right;
+
+    height:40px;
+
+    width:40px;
+
+    overflow:hidden;
+
+    background-image:URL(../img/jmreport-popPage-close.png);
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    cursor:pointer;
+
+}
+
+
+
+div.jmreport-window>div.jmreport-window-content
+
+{
+
+    background-color:#fff;
+
+    min-height:50px;
+
+ }
+
+ 
+
+ /*透视的样式*/
+
+ div#jmreport-poppage-tree-content
+
+ {
+
+     width:0px;
+
+     background-color:#EFEEEE;
+
+     overflow:scroll;
+
+     text-align:left;
+
+}
+
+div#jmreport-poppage-frame-content
+
+{
+
+    width:auto;
+
+    overflow:hidden;
+
+}
+
+div#jmreport-poppage-frame-content iframe
+
+{
+
+    width:auto;
+
+    border:0px;
+
+    width:100%;
+
+}
+
+
+
+div#jmreport-poppage-tree-content ul
+
+{
+
+    overflow:hidden;
+
+    clear:both;
+
+}
+
+#jmreport-poppage-tree
+
+{
+
+    padding:5px;
+
+    width:500px;
+
+}
+
+#jmreport-poppage-tree > li > ul ul
+
+{
+
+    display:block;
+
+    padding-left:20px;
+
+    background-image:url(../img/treeNodes/short_child.png);
+
+    background-position:left;
+
+    background-repeat:repeat-y;
+
+    clear:both;
+
+}
+
+#jmreport-poppage-tree li.end > ul
+
+{
+
+    background-image:none;
+
+}
+
+#jmreport-poppage-tree li
+
+{
+
+    overflow:hidden;
+
+    
+
+}
+
+#jmreport-poppage-tree li>span
+
+{
+
+    float:left;
+
+    overflow:hidden;
+
+    display:inline-block;
+
+    cursor:pointer;
+
+}
+
+#jmreport-poppage-tree li > span.icon
+
+{
+
+    height:30px;
+
+    width:40px;
+
+}
+
+#jmreport-poppage-tree li > span.title
+
+{
+
+    height:30px;
+
+    line-height:30px;
+
+    font-size:12px;
+
+    text-align:left;
+
+}
+
+
+
+#jmreport-poppage-tree li > span.title.boldTitle
+
+{
+
+    font-size:14px;
+
+    font-weight:bold
+
+}
+
+
+
+#jmreport-poppage-tree li.master > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/master.png);
+
+}
+
+#jmreport-poppage-tree li.master.open > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/master-open.png);
+
+}
+
+
+
+#jmreport-poppage-tree li.childNode > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/child-node.png);
+
+}
+
+#jmreport-poppage-tree li.childNode.open > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/child-node-open.png);
+
+}
+
+#jmreport-poppage-tree li.childNode.end > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/child-node-end.png);
+
+}
+
+#jmreport-poppage-tree li.childNode.end.open > span.icon
+
+{
+
+    background-image:url(../img/treeNodes/child-node-end-open.png);
+
+}

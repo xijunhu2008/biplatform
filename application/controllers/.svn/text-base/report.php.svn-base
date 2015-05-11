@@ -1,0 +1,74 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+require('base.php');
+
+class Report extends Base_Controller {
+	function __construct()  
+	{
+        parent::__construct();
+    }
+
+	/**
+	 *  
+	 * 业务报表
+	 */
+	public function index($appid)
+	{
+		$user = $this->login->getUser();	
+		$this->load->model('Production_model', 'production');
+		$this->load->model('Menu_model', 'menu');
+		$app = $this->production->getById($appid);
+		$menus = $this->menu->getProductionAdnFrameworkMenus($app['id'], $app['reportframeworkid']);
+		$menuhtml = $this->createMenuHtml($menus);
+		$this->parser->parse('v_report', array('app'=>$app,'menuhtml'=>$menuhtml, 'user'=>$user));
+	}
+
+	//生成菜单html
+	function createMenuHtml($menus, $parent=null, $deep=1) {
+		if(!$menus || count($menus) == 0) return '';
+		if(!$parent) $parent = array('id'=>0);
+		if(!isset($parent['children'])) {
+			$parent['children'] = array();
+			foreach ($menus as $m) {
+				if($m['parentid'] == $parent['id'] || ($parent['id']==0 && !$m['parentid'])) {
+					$parent['children'][] = $m;
+				}
+			}
+		}
+		$html = '';
+		if(count($parent['children']) > 0) {
+			if($parent['id'] > 0) {
+				$html .= "<li class=\"menu\"><a href=\"#\" class=\"menu\" data-deep=\"{$deep}\">{$parent['displayname']}<div class=\"mark\"></div></a>";
+				$html .= '<ul>';
+				foreach ($parent['children'] as $cm) {
+					$html .= $this->createMenuHtml($menus, $cm, $deep);
+				}
+				$html .= '</ul></li>';
+			}
+			else {
+				foreach ($parent['children'] as $cm) {
+					$html .= $this->createMenuHtml($menus, $cm, $deep);
+				}
+			}
+		}
+		else { 
+            $html .= "<li class=\"page\">";
+		    $html .= "<a href=\"#\" data-relegation=\"{$parent['relegation']}\" data-page=\"{$parent['pageid']}\" class=\"page\" title=\"{$parent['displayname']}\" data-deep=\"{$deep}\" data-home=\"0\">{$parent['displayname']}&nbsp;&nbsp;</a>";
+            $html .= "</li>";
+        }
+        return $html;
+	}
+
+	//请求后台数据
+	function getData() {		
+		$this->load->model('Reportdata_model', 'reportData');
+		
+		$param = @json_decode($this->input->post('param'), true);
+		
+		$data = array();
+		$data[] = $this->reportData->requestData($param);
+		
+		$this->jsonContent($data);
+	}
+}
+?>

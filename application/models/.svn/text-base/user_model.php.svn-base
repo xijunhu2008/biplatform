@@ -1,0 +1,38 @@
+<?php
+/**
+ * 用户操作
+ *
+ * @author fefeding
+ * @date 2014-12-21
+ */
+class User_model extends CI_Model
+{
+
+	//通过帐号和密码获取用户信息，主要用于登录用
+	public function getByAccAndPwd($acc, $pwd) {
+		$sql = "select id, account, nickname from tbuser where account=? and password=?";
+		$pwd = $this->createPassword($acc, $pwd);		
+		$user = $this->dbHelper->select_row($sql, array($acc, $pwd));
+		return $user;
+	}
+
+	//通过帐号获取用户信息
+	public function getByAccount($acc) {
+		$sql = "select id, account, nickname from tbuser where account=?";			
+		$user = $this->dbHelper->select_row($sql, array($acc));
+		return $user;
+	}
+
+	//通过id获取用户信息
+	public function getById($id) {
+		$sql = "select id, account, nickname from tbuser where id=?";			
+		$user = $this->dbHelper->select_row($sql, array($id));
+		return $user;
+	}
+
+	//生成用户存储密码
+	private function createPassword($acc, $pwd) {
+		return strtoupper(md5($pwd));
+	}
+}
+?>

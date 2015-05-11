@@ -1,0 +1,691 @@
+﻿
+
+/*翻页*/
+
+#pager
+
+{
+
+    display: block;
+
+    margin: 4px 25px;
+
+    text-align: right;    
+
+}
+
+#pager a
+
+{
+
+    margin: 1px 4px;
+
+    width:28px;
+
+    height:28px;
+
+    color: #53616E;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    display:inline-block;
+
+    border-radius: 28px;
+
+    line-height:28px;
+
+    text-align:center;
+
+}
+
+#pager a.next
+
+{
+
+    font-weight:bolder;
+
+    color:#505050;
+
+    font-size:18px;
+
+    font-family:幼圆;
+
+}
+
+#pager .cur
+
+{
+
+    background-color: #42B3BD;
+
+    color:#fff;
+
+}
+
+
+
+/*新的productList*/
+
+.proBody
+
+{
+
+    min-width:800px;
+
+    min-height:500px;
+
+    overflow:hidden;
+
+    list-style:none;
+
+    margin:0px auto 0px auto;
+
+    padding:30px 0px 30px 0px;
+
+}
+
+.proBody .b_left
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+    width:180px;
+
+    min-height:500px;
+
+}
+
+.proBody .b_center
+
+{
+
+    overflow:hidden;
+
+    display:block;
+
+    width:80%;
+
+    margin: 0 auto;
+
+    min-height:500px;
+
+}
+
+
+
+/*产品列表*/
+
+.applist
+
+{
+
+    overflow:hidden;
+
+    margin-top:-10px;
+
+    min-height:500px;
+
+}
+
+.applist ul
+
+{
+
+    overflow:hidden;
+
+    list-style:none;
+
+    margin:0px auto 0px auto;
+
+    width:100%;
+
+}
+
+.applist ul li
+
+{
+
+    float:left;
+
+    display:inline-block;
+
+    margin:10px 10px ;
+
+}
+
+.applist ul li a
+
+{
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+}
+
+.applist ul li .img
+
+{
+
+    vertical-align:middle;
+
+    background-color:#fff;
+
+    width:118px;
+
+    height:118px;
+
+    border:1px solid #425875;
+
+    display:block;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    border-radius: 6px;
+
+}
+
+.applist ul li .img:hover
+
+{
+
+    border:1px solid #1a2331;
+
+}
+
+.applist ul li .img img
+
+{
+
+   width:118px;
+
+   height:118px;
+
+   margin:0px auto 0px auto;
+
+}
+
+
+
+.applist ul li .title
+
+{
+
+    position:absolute;
+
+    margin-top:-20px;
+
+    height:24px;
+
+    line-height:24px;
+
+    display:block;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:#fff;
+
+    border-radius: 0px 0px 5px 5px;
+
+    width:120px;
+
+    background-color:#425875;
+
+}
+
+.applist ul li:hover span.title
+
+{
+
+    width:108px;
+
+    margin-top:-30px;
+
+    border-radius: 0px 0px 0px 0px;
+
+    padding:5px;
+
+    text-shadow:0px 0px 0px #000;
+
+    background-color:#1a2331;
+
+     -webkit-transition:all.1s linear .1s;
+
+    transition: all.1s linear .1s;
+
+    border-bottom-left-radius: 6px;
+
+    border-bottom-right-radius: 6px;
+
+    vertical-align:middle;
+
+    border:solid 1px #1a2331;
+
+    border-top:none;
+
+}
+
+
+
+.applist ul li.pro.noPermission span.noPermissionSp
+
+{
+
+    background-image:url(../img/black/BlackSkin.png);
+
+    position:absolute;
+
+    display:block;
+
+    width:120px;
+
+    height:120px;
+
+    z-index:1;
+
+}
+
+
+
+.applist ul li.pro.noPermission span.lock
+
+{
+
+     background-image:url(Images/lock.png);
+
+     background-position:center center;
+
+     background-repeat:no-repeat;
+
+     position:absolute;
+
+     display:block;
+
+     width:120px;
+
+     height:120px;
+
+     z-index:2;
+
+}
+
+
+
+/*搜索框*/
+
+.serchBox
+
+{
+
+    width:auto;
+
+    height:40px;
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    background-color:#fff;
+
+}
+
+
+
+.serchBox input
+
+{
+
+    height:40px;
+
+    width:100%;
+
+    border:0px;
+
+    background-image:url(Images/serch.png);
+
+    background-position:11px center;
+
+    background-repeat:no-repeat;
+
+    padding-left:51px;
+
+    overflow:hidden;
+
+}
+
+
+
+/*类型过滤器*/
+
+.shortList
+
+{
+
+    width:auto;
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+    background-color:#fff;
+
+}
+
+.shortList ul
+
+{
+
+    list-style:none;
+
+    margin:20px;
+
+}
+
+.shortList ul li
+
+{
+
+    margin-top:10px;
+
+}
+
+.shortList ul li span
+
+{
+
+    color:#666666;
+
+    font-size:14px;
+
+}
+
+/*常用业务*/
+
+.histroyList
+
+{
+
+    width:auto;
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+    padding:0px 20px 0px 20px;
+
+    background-color:#fff;
+
+}
+
+.histroyList .title
+
+{
+
+    height:45px;
+
+    line-height:45px;
+
+    font-size:16px;
+
+    border-bottom:1px solid #ccc;
+
+    text-align:center;
+
+    
+
+}
+
+.histroyList ul
+
+{
+
+    overflow:hidden;
+
+    list-style:none;
+
+    padding-bottom:20px;
+
+}
+
+.histroyList ul li
+
+{
+
+    margin:20px 0px 0px 0px
+
+}
+
+.histroyList ul li a
+
+{
+
+    color:#058DC7;
+
+    font-size:14px;
+
+}
+
+.histroyList ul li img
+
+{
+
+    float:left;
+
+    margin:4px;
+
+}
+
+
+
+/*申请业务*/
+
+.singupProduction
+
+{
+
+    width:auto;
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    background-color:#838D96;
+
+    cursor:pointer;
+
+    height:40px;
+
+    line-height:40px;
+
+    text-align:center;
+
+    font-size:16px;
+
+    color:#fff;
+
+    -webkit-transition:all.1s linear .1s;
+
+    transition: all.1s linear .1s;
+
+    margin-bottom:20px;
+
+}
+
+.singupProduction:hover
+
+{
+
+    background-color:#53616E;
+
+    -webkit-transition:all.1s linear .1s;
+
+    transition: all.1s linear .1s;
+
+}
+
+
+
+/*公告*/
+
+.notice
+
+{
+
+    width:auto;
+
+    border:1px solid #ccc;
+
+    overflow:hidden;
+
+    padding:0px 20px 0px 20px;
+
+    background-color:#fff;
+
+}
+
+.notice .title
+
+{
+
+    height:45px;
+
+    line-height:45px;
+
+    font-size:16px;
+
+    border-bottom:1px solid #ccc;
+
+    text-align:center;
+
+    
+
+}
+
+.notice .notice-border
+
+{
+
+    width:140px;
+
+    height:180px;
+
+    margin:10px 0px 10px 0px; 
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.notice .notice-content
+
+{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.notice .notice-content li
+
+{
+
+    width:140px;
+
+    height:180px;
+
+}
+
+
+
+.notice-content li a
+
+{
+
+    text-decoration:none;
+
+    color:#058DC7;
+
+    font-size:14px;
+
+}
+
+
+
+#notice-content .little-point-content
+
+{
+
+    overflow:hidden
+
+}
+
+
+
+#notice-content .little-point-content .little-point
+
+{
+
+    list-style:none;
+
+    float:right;
+
+}
+
+
+
+#notice-content .little-point-content .little-point li
+
+{
+
+    float:left; 
+
+    display:inline-block;
+
+    margin:5px;
+
+    width:10px;
+
+    height:10px;
+
+    background-color:#a3a3a3;
+
+    border-radius:5px;
+
+    cursor:default;
+
+    filter:alpha(opacity=50);
+
+    opacity:0.5;
+
+}
+
+
+
+#notice-content .little-point-content .little-point li.alt-point
+
+{
+
+    filter:alpha(opacity=100);
+
+    opacity:1;
+
+}

@@ -1,0 +1,151 @@
+﻿.ui-tabs .ui-tabs-nav {
+	margin: 0px 10px 10px 10px;
+	padding: 0;
+	background-image:none;
+	background-color:#fff;
+	border:0px;
+	border:1px solid #e4e4e4;
+	margin-top:-2px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-default.ui-tabs-active {
+    background-image:none;
+	background-image:none;
+	
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-transition: all .1s linear .1s; 
+	transition: all .1s linear .1s;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-default
+{
+    background-image:none;
+    background-color:transparent;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	
+	-webkit-transition: all .1s linear .1s;
+	 transition: all .1s linear .1s;
+}
+
+.jmreport-tabs-content.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
+    padding:0px;
+    border:0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    border:0px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a ,
+.ui-tabs .ui-tabs-nav li a, 
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a
+{
+     height:30px;
+     border:0px;
+     overflow:hidden;
+     line-height:30px;
+     margin:0px;
+     padding:0px 30px;
+     font-weight:normal;
+     border-right:1px solid #e4e4e4;
+     color:#999999 ;
+}
+
+.ui-state-default.ui-corner-top.ui-tabs-active.ui-tabs-active a
+{
+    background-color:#f2f2f2;
+    color:#333333 ;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    font-weight:bold;
+}
+.ui-state-default.ui-corner-top.ui-tabs-active.ui-tabs-active a:hover
+{
+     background-color:#e4e4e4;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+.ui-tabs .ui-tabs-nav li a:hover
+{
+    background-color:#e4e4e4;
+    color:#333333;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.ui-widget-content{ background:#fff }
+.ui-widget-header { background:#fff }
+
+.input,a,li,ul,div,table{outline:0}
+
+/*窗口样式*/
+/*外框*/
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable,.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+{
+    border:0px;
+    padding:0px;
+    border:0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/*标题*/
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+{
+    height:50px;
+    background-color:#42b2bd;
+}
+/*标题文字*/
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix .ui-dialog-title
+{
+    line-height:50px;
+    font-size:16px;
+    color:#fff;
+    padding-left:20px;
+    margin:0px;
+}
+/*关闭按钮*/
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close,.ui-button-icon-primary.ui-icon.ui-icon-closethick
+{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background-image:url(images/jmreport-popPage-close.png);
+    background-repeat:no-repeat;
+    height:24px;
+    width:24px;
+    background-color:transparent;
+    border:0px;
+    outline:0;
+    margin-right:10px;
+}
+
+/*悬浮层背景*/
+.ui-widget-overlay
+{
+    background-color:#000;
+    background-image:none;
+    opacity: 0.5;
+    filter: Alpha(Opacity=50);
+}

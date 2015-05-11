@@ -1,0 +1,41 @@
+<?php
+
+/**
+
+ * 控件操作
+
+ *
+
+ * @author fefeding
+
+ * @date 2014-12-21
+
+ */
+
+class Control_model extends MY_Model
+
+{
+
+	//获取页面的
+
+	public function getToolbarControlsByPage($id) {
+
+		$sql = "select * from tbtoolbarcontrolconfig where pageid=?";
+
+		return $this->dbHelper->select($sql, array($id));
+
+	}
+
+
+
+	//获取页面的报表控件
+
+	public function getReportControlsByPage($id) {
+
+		$sql = "select * from tbreportcontrolconfig where reportid=?";
+
+		return $this->dbHelper->select($sql, array($id));
+
+	}
+
+}

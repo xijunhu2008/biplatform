@@ -1,0 +1,401 @@
+﻿/*jm菜单样式*/
+/**
+ * 报表右侧菜单
+ */
+div.report-menu {	
+	display: inline-block;
+	vertical-align: top;
+    width: 100%;
+    overflow: hidden;
+}
+div.report-menu ul{
+    list-style: none;
+}
+
+div.report-menu>ul li {
+	margin-top: 1px;
+	overflow:hidden;
+}
+
+div.report-menu>ul>li>ul li.menu
+{
+    border-bottom:1px solid #ccc
+}
+div.report-menu>ul>li ul
+{
+    border-top:1px solid #ccc
+}
+
+ 
+div.report-menu>ul>li a {	
+	line-height: 40px;
+	font-size: 13px;
+	color: #333;
+    width: 100%;
+    text-align: right;
+	display: inline-block;
+}
+/*一级菜单*/
+div.report-menu>ul>li>a {
+	color: #00665E;
+    font-size:13px;
+	text-align: left;
+	background-color: #CFD3D2;
+    padding-left: 4px;
+    border-left: 8px solid #00665E;
+}
+
+div.report-menu > ul > li > a.menu-current,div.report-menu>ul>li>a.page-current
+{
+    color: #fff;
+    background-color: #868186;
+    border-left: 8px solid #AB7732;
+}
+
+div.report-menu>ul>li ul {
+	display: none;
+	overflow: hidden;
+}
+/*二级或二级以上的菜单*/
+div.report-menu>ul>li>ul a {
+	text-align: right;
+    background-color: #f2f2f2;
+}
+div.report-menu>ul>li>ul a.menu {
+	font-size: 13px;
+	font-weight: 500;	
+}
+div.report-menu>ul>li>ul>li>ul a.menu
+{
+    background-color:#fff
+}
+
+div.report-menu>ul>li>ul a.menu .mark {		
+	background-image:url(../img/jmreport-menu-itemDown.png);
+	width:16px;
+	height:16px;
+	display: inline-block;
+	margin-right: 10px;
+}
+div.report-menu>ul>li>ul a.menu-current {
+	font-weight:bold;
+}
+div.report-menu>ul>li>ul a.menu-current .mark {		
+	background-image:url(../img/jmreport-menu-itemUp.png);
+	width:16px;
+	height:16px;
+}
+
+/*二级或二级以上的页面*/
+div.report-menu>ul>li>ul a.page {
+    text-align:left;
+    padding-left:24px;
+	font-size: 13px;
+	line-height: 28px;
+	background-color: #fff;
+    border:0;
+}
+
+.report-menu>ul>li>ul>li>a.page
+{
+    display:block;
+    overflow:hidden;
+    text-align:left;
+    padding-left:24px;
+}
+.report-menu > ul > li a.page:hover {
+    background-color :#ddd;
+    text-decoration:none;
+    color: #000;
+}
+
+div.report-menu a.menu,div.report-menu a.page
+{
+    white-space:nowrap;
+}
+div.report-menu a.menu:hover,div.report-menu a.page:hover
+{
+    text-decoration:underline;
+}
+/*当前打开的页面*/
+div.report-menu>ul>li>a.page-current 
+{
+    color: #fff;
+	font-weight:bold;
+}
+div.report-menu>ul>li>ul a.page-current {
+	color: #eb792a;
+	font-weight:bold;
+}
+
+
+/*渠道*/
+.domain
+{
+ float:left;
+ height:30px;
+ margin:0 60px;
+ font-size:14px;
+ font-family:微软雅黑;
+ display:inline-block;
+}
+.domain div
+{
+ display:inherit;
+}
+.domain .domain-left
+{
+    height:30px;  
+    float:left; 
+}
+.domain .domain-right
+{
+    height:30px;   
+    float:left; 
+    background:url(../img/domain-right-bg.png) 0 0 no-repeat;
+    background:url(../img/domain-right-bg.png) 0 0 no-repeat,url(../img/domain-bg.png) 0 0 repeat-x;
+}
+.domain-body
+{
+    height:30px;
+    margin:auto;
+    float:left;
+    position:relative;
+}
+/*五星*/
+.domain .star
+{
+    float:left;
+    margin-left:10px;    
+}
+.domain .item
+{
+   height:30px;
+   line-height:30px;   
+   color:#fff;
+   font-weight:500;
+   padding:0 10px;  
+   margin-right: 8px; 
+   overflow:hidden;
+   float:left;
+   cursor:pointer;
+}
+
+.domain .item-sp
+{
+    width:8px;
+    float:left;
+    height:30px;
+}
+.domain .item:hover
+{
+}
+.domain .item-selected
+{    
+    color: #000;
+    background-color:#fff;
+}
+
+/*产品选择器样式*/
+.selpro-bg
+{
+   margin-left:20px; 
+   float:left;
+}
+    
+.sel-target
+{
+    max-width:200px;    
+    min-width:60px;
+    float:left;
+    overflow:hidden;
+    position:relative;   
+    cursor:pointer;
+    vertical-align:middle; 
+    background-color:#fff;
+}
+
+
+.sel-target img
+{
+    width:20px;
+    height:20px;
+    float:left;
+    margin:3px;
+}
+.sel-target span
+{
+    background: url(../img/jmreport-menu-itemDown.png)right center no-repeat;
+    padding-right:25px; 
+    line-height:30px;
+    font-size:14px;
+    color:#000;
+}
+.sel-target b
+{
+  float:left;
+  margin-left:4px;
+}
+.sel-target .sel-mark
+{
+   float:right;   
+   border-top:9px solid #478891;
+   border-left:5px solid transparent;
+   border-right:5px solid transparent;
+   margin:-12px 15px;
+}
+div.sel-body
+{
+    border:1px solid #848484;
+    overflow:hidden;
+    overflow-y:auto;    
+    position:absolute;
+    display:none;
+    min-height:100px;
+    width:700px;
+    max-width:800px;    
+    background-color:#fff;
+    z-index:10001;
+}
+div.sel-body div.search
+{
+    padding:5px 10px;
+}
+div.sel-body div.search input
+{
+    float:right;
+    height:20px;
+    min-width:80px;
+    line-height:20px;
+    border:1px solid #ccc;
+    background:url(../img/search-1.png) 100% 50% no-repeat;
+}
+div.sel-group
+{  
+   width:100%; 
+}
+div.sel-group-title
+{
+   color:#333333; 
+   font-size:16px;
+   font-weight:bold;
+   height:25px;
+   line-height:24px;
+   padding:6px 10px;
+   background-color:#F2F2F2;
+   text-overflow:ellipsis;
+   border-top:1px solid #ccc;
+   border-bottom:1px solid #ccc;
+}
+/* 分类序列*/
+div.sel-group-title div.sel-group-buttons
+{
+    float:right;
+}
+div.sel-group-title div.sel-group-buttons a
+{
+    font-size:12px;
+    padding:4px 6px;
+    margin:2px 6px;
+    text-decoration:none;
+    border:1px solid #ccc;
+    color:#272727;
+    background-color:#fff;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+div.sel-group-title div.sel-group-buttons a.selected,
+div.sel-group-title div.sel-group-buttons a:hover
+{
+    background-color:#A7A7A7;
+}
+.sel-group-body
+{
+    list-style:none;
+    padding:4px;
+    margin:2px;
+    width:100%;
+}
+.sel-group-body li
+{
+  float:left;  
+  cursor:pointer;
+  margin:2px 8px 15px 4px;
+  width:100px;
+  height:25px;
+  overflow:hidden;
+}
+.sel-group-body li:hover
+{
+   filter: alpha(opacity=60);
+   -moz-opacity: 0.6;
+   opacity: 0.6; 
+}
+
+.sel-group-body li img
+ {
+   width:18px;
+  height:18px;
+  line-height:18px;
+ }
+ .sel-group-body li span
+ {
+   color:#383838;
+   font-size:12px;
+   margin-left:2px;  
+  /*line-height:18px;*/ 
+   width:75px;
+   height:18px;
+   display:inline-block;
+   text-overflow:ellipsis;
+   white-space:nowrap;
+}
+
+ /*翻页*/
+div.sel-group .pager
+{
+    display: block;
+    margin: 4px 10px;
+    text-align: center;    
+}
+div.sel-group .pager a
+{
+    margin: 1px 4px;
+    padding: 2px 8px;
+    color: #4D4D4D;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display:inline-block;
+}
+div.sel-group .pager a:hover
+{
+    background-color: #BCDBED;
+}
+div.sel-group .pager .cur
+{
+    background-color: #046DB8;
+    color:#fff;
+}
+
+/*渠道选择器*/
+.appdomain
+{
+    float:left; 
+    overflow:hidden;   
+}
+.appdomain ul
+{
+    max-width:800px;
+}
+.appdomain ul,.app-lan ul
+{
+  list-style:none;
+}
+
+div.report-menu a
+{
+    text-decoration:none;
+}
